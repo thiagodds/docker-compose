@@ -1,0 +1,13 @@
+version: '2'
+services: 
+    redis:
+        build: ./redis
+        ports:
+            - "6379:6379"
+    redmon:
+        build: ./redmon
+        ports:
+            - "4567:4567"
+        links:
+            - redis:redis
+        command: --redis redis://redis:6379
