@@ -2,10 +2,12 @@ version: '2'
 services: 
     redis:
         build: ./redis
+        container_name: redis-server
         ports:
-            - "6379:6379"
+            - 6379:6379
     redmon:
         build: ./redmon
+        container_name: redis-admin
         ports:
             - "4567:4567"
         links:
