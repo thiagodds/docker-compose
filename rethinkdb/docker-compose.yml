@@ -5,5 +5,5 @@ services:
         container_name: rethinkdb
         ports: 
             - 8080:8080
-            - 2815:2815
-            - 2915:2915
+            - 28015:28015
+            - 29015:29015
