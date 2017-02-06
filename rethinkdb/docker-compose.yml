@@ -1,0 +1,9 @@
+version: '2'
+services: 
+    rethinkdb:
+        build: .
+        container_name: rethinkdb
+        ports: 
+            - 8080:8080
+            - 2815:2815
+            - 2915:2915
