@@ -5,6 +5,8 @@ services:
         container_name: elasticsearch
         ports: 
             - 9200:9200
+        volumes:
+            - /Volumes/elasticsearch/:/usr/share/elasticsearch/data
     kibana:
         build: ./kibana
         container_name: kibana
@@ -15,3 +17,5 @@ services:
     logstash:
         build: ./logstash
         container_name: logstash
+        volumes: 
+            - /Volumes/logstash:/usr/share/logstash/pipeline/
