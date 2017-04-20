@@ -1,0 +1,15 @@
+version: '2'
+services:
+    mongo:
+        build: ./mongo
+        container_name: mongoDB
+        ports:
+            - 27017:27017
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=username
+            - MONGO_INITDB_ROOT_PASSWORD=password
+    admin:
+      build: ./admin
+      container_name: adminmongo
+      ports:
+          - 1234:1234

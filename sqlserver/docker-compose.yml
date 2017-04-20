@@ -1,0 +1,12 @@
+version: '2'
+services: 
+    sqlserver:
+        image: microsoft/mssql-server-linux
+        volumes: 
+          - /Volumes/sqlserver:/var/tmp/
+        container_name: sqlserver
+        environment:
+          ACCEPT_EULA: Y
+          SA_PASSWORD: Nplk@2012
+        ports:
+          - 1433:1433

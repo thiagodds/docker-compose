@@ -19,3 +19,7 @@ services:
         container_name: logstash
         volumes: 
             - /Volumes/logstash:/usr/share/logstash/pipeline/
+
+#references: https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+#user: elastic
+#password: changeme
