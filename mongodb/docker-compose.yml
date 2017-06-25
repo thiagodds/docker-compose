@@ -13,3 +13,5 @@ services:
       container_name: adminmongo
       ports:
           - 1234:1234
+      links:
+          - "mongo"
