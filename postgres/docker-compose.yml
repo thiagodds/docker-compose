@@ -1,0 +1,16 @@
+version: '2'
+services:
+    postgres:
+        image: postgres:9.6.3
+        ports: 
+            - 5432:5432
+        container_name: postgres
+        environment:
+            - POSTGRES_PASSWORD=password
+    pgweb:
+        image: donnex/pgweb
+        ports: 
+            - 8080:8080
+        container_name: pgweb
+        links:
+            - postgres
